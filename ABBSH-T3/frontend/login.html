@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — Abbsh Blogs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="no-lines">
+
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="brand">
+      <span class="stamp"><span>AB</span></span>
+      <span class="brand-text">Abbsh Blogs<small>notes worth keeping</small></span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav"></nav>
+  </div>
+</header>
+
+<main class="page-main">
+  <div class="auth-shell">
+    <div class="auth-card">
+      <span class="stamp"><span>02</span></span>
+      <h1>Log in</h1>
+      <p class="sub">Your shelf is right where you left it.</p>
+
+      <div class="form-msg" id="form-msg"></div>
+
+      <form id="login-form" novalidate>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="••••••••" required>
+
+        <button type="submit" class="btn btn-accent btn-block">Log in</button>
+      </form>
+
+      <p class="auth-switch">New to Abbsh Blogs? <a href="register.html">Create an account</a></p>
+      <p class="auth-switch" style="margin-top:6px;">Demo login: mara@abbshblogs.dev / password123</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Abbsh Blogs — a browser-only demo. Nothing you write here leaves your device.</div>
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    initNav("login");
+  });
+</script>
+</body>
+</html>

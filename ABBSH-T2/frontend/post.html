@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="doc-title">Entry — Abbsh Blogs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="no-lines">
+
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="brand">
+      <span class="stamp"><span>AB</span></span>
+      <span class="brand-text">Abbsh Blogs<small>notes worth keeping</small></span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav"></nav>
+  </div>
+</header>
+
+<main class="page-main">
+  <div id="post-detail"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Abbsh Blogs — a browser-only demo. Nothing you write here leaves your device.</div>
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/blog.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    initNav("home");
+    renderPostDetail();
+  });
+</script>
+</body>
+</html>

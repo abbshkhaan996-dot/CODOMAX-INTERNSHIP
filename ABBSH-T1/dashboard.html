@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Abbsh Blogs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="brand">
+      <span class="stamp"><span>AB</span></span>
+      <span class="brand-text">Abbsh Blogs<small>notes worth keeping</small></span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav"></nav>
+  </div>
+</header>
+
+<main class="page-main">
+
+  <section class="dash-head">
+    <div class="wrap">
+      <div class="dash-identity">
+        <div class="avatar" id="dash-avatar">W</div>
+        <div>
+          <p class="eyebrow">Your shelf</p>
+          <h1>Welcome back, <span id="dash-username">writer</span>.</h1>
+          <p class="sub">Every entry you've put your name to, all in one place.</p>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-card stat-accent-a">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fffdf9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l12-12 3 3-12 12H4v-3z"/></svg>
+          </div>
+          <div class="num" id="stat-total">0</div>
+          <div class="label">Posts published</div>
+        </div>
+        <div class="stat-card stat-accent-b">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fffdf9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          </div>
+          <div class="num" id="stat-words">0</div>
+          <div class="label">Words written</div>
+        </div>
+        <div class="stat-card stat-accent-c">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fffdf9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+          </div>
+          <div class="num" id="stat-latest">—</div>
+          <div class="label">Latest entry</div>
+        </div>
+      </div>
+
+      <div class="category-breakdown" id="category-breakdown"></div>
+    </div>
+  </section>
+
+  <section class="dash-body">
+    <div class="wrap">
+      <div class="ledger-head">
+        <h2>Your posts</h2>
+        <a href="create-blog.html" class="btn btn-accent btn-sm">Create Blog</a>
+      </div>
+      <div id="my-posts-list"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Abbsh Blogs — a browser-only demo. Nothing you write here leaves your device.</div>
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/blog.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    initNav("dashboard");
+  });
+</script>
+</body>
+</html>

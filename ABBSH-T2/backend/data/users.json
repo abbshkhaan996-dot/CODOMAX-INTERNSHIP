@@ -1,0 +1,14 @@
+[
+  {
+    "id": "u1",
+    "name": "Mara Ellison",
+    "email": "mara@abbshblogs.dev",
+    "passwordHash": "$2a$10$uSXT5w10xiX1s4SsjNDG6eAjakzb1s1KR8tFfUWk0I4wpxu.BHo6C"
+  },
+  {
+    "id": "u8e78a066-c6cf-417e-9b9a-2d7fda76391a",
+    "name": "Asma khan",
+    "email": "asmaakhaan996@gmail.com",
+    "passwordHash": "$2a$10$T2BUEFPirzIIqU3wCkkUCeqOSChGeY927G4BS8J/b8G/fO4t0tkaO"
+  }
+]
