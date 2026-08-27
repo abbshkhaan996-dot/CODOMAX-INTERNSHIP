@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abbsh Blogs — Where Stories Come to Life</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="brand">
+      <span class="stamp"><span>AB</span></span>
+      <span class="brand-text">Abbsh Blogs<small>notes worth keeping</small></span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav"></nav>
+  </div>
+</header>
+
+<main class="page-main">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Issue 12 — Fresh Off the Shelf</p>
+        <h1>Thoughts Worth The Ink</h1>
+        <p class="sub">A shelf of honest essays, hands-on build logs, and half-finished thoughts turned into whole ones — written by people who'd rather publish than perfect.</p>
+        <div class="hero-actions">
+          <a href="register.html" class="btn btn-accent">Start writing</a>
+          <span class="hero-meta-inline" id="hero-stats">Loading the shelf…</span>
+        </div>
+      </div>
+      <div class="featured-card" id="featured-card"></div>
+    </div>
+  </section>
+
+  <section class="category-shelf-section" id="category-shelf-section">
+    <div class="wrap">
+      <p class="eyebrow">Wander through all 25 categories</p>
+      <div class="category-shelf" id="category-shelf"></div>
+    </div>
+  </section>
+
+  <section class="ledger" id="ledger-section">
+    <div class="wrap">
+      <div class="ledger-head">
+        <h2>The ledger</h2>
+        <div class="ledger-controls">
+          <input type="search" id="post-search" class="search-input" placeholder="Search entries…" aria-label="Search blog posts">
+          <select id="category-filter" class="filter-select" aria-label="Filter by category"></select>
+        </div>
+      </div>
+      <div id="ledger-list"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Abbsh Blogs — a browser-only demo. Nothing you write here leaves your device.</div>
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/blog.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    initNav("home");
+    renderFeaturedHero();
+  });
+</script>
+</body>
+</html>

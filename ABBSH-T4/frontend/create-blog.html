@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Blog — Abbsh Blogs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav-row">
+    <a href="index.html" class="brand">
+      <span class="stamp"><span>AB</span></span>
+      <span class="brand-text">Abbsh Blogs<small>notes worth keeping</small></span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav"></nav>
+  </div>
+</header>
+
+<main class="page-main">
+  <section class="create-shell">
+    <div class="wrap">
+      <p class="eyebrow" id="page-eyebrow">New entry</p>
+      <h1 id="page-title">Get it out of your head.</h1>
+      <p class="sub" id="page-sub" style="margin-bottom:32px;">Today's date goes on it automatically, and it lands straight on your shelf.</p>
+
+      <div class="create-card">
+        <div class="form-msg" id="form-msg"></div>
+
+        <form id="create-form" novalidate>
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" placeholder="A working title for your post" required>
+
+          <label for="category">Category</label>
+          <select id="category" name="category">
+            <option value="Craft">Craft</option>
+            <option value="Build">Build</option>
+            <option value="Notes">Notes</option>
+            <option value="Lifestyle">Lifestyle</option>
+            <option value="Technology">Technology</option>
+            <option value="Travel">Travel</option>
+            <option value="Opinion">Opinion</option>
+            <option value="Business">Business</option>
+            <option value="Finance">Finance</option>
+            <option value="Health">Health</option>
+            <option value="Food">Food</option>
+            <option value="Sports">Sports</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Science">Science</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Education">Education</option>
+            <option value="Music">Music</option>
+            <option value="Art">Art</option>
+            <option value="Photography">Photography</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Environment">Environment</option>
+            <option value="Politics">Politics</option>
+            <option value="Relationships">Relationships</option>
+            <option value="Parenting">Parenting</option>
+            <option value="Culture">Culture</option>
+            <option value="Other">Other (specify)</option>
+          </select>
+
+          <div id="other-category-wrap" style="display:none;">
+            <label for="category-other">Custom category</label>
+            <input type="text" id="category-other" name="categoryOther" placeholder="Name your own category">
+          </div>
+
+          <label for="cover-image">Cover image <span style="text-transform:none;letter-spacing:0;">(optional)</span></label>
+          <div class="image-drop" id="image-drop">
+            <div class="image-drop-empty" id="image-drop-empty">
+              <span class="stamp"><span>Img</span></span>
+              <p>Click to upload a cover image<br><small>PNG or JPG, up to 2MB</small></p>
+            </div>
+            <div class="image-preview-wrap" id="image-preview-wrap" style="display:none;">
+              <img id="image-preview" alt="Cover preview">
+              <button type="button" class="btn btn-outline btn-sm" id="image-remove">Remove image</button>
+            </div>
+            <input type="file" id="cover-image" name="coverImage" accept="image/png, image/jpeg, image/webp" hidden>
+          </div>
+          <div class="field-error" id="image-error"></div>
+
+          <label for="content">Content</label>
+          <textarea id="content" name="content" placeholder="Start writing…" required></textarea>
+          <div class="char-count" id="char-count">0 words</div>
+
+          <div class="form-actions">
+            <a href="dashboard.html" class="btn btn-outline">Cancel</a>
+            <button type="submit" class="btn btn-accent" id="submit-btn">Publish entry</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Abbsh Blogs — a browser-only demo. Nothing you write here leaves your device.</div>
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/blog.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    initNav("create");
+  });
+</script>
+</body>
+</html>
